@@ -32,8 +32,3 @@ export const CATEGORIES: string[] = [
     'PRE_ROLL_CBD',
 ];
 
-// export const TYPEPHOTO: string[] = [
-//     'Photo',
-//     'Document',
-//     'Kml',
-// ];

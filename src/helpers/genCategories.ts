@@ -26,10 +26,8 @@ export const genCategories = (): ICategory[] => {
     let categories: ICategory[] = [];
     for (let i: number = 0; i < CATEGORIES.length; i++) {
         const category: ICategory = {
-            // id: i + 1,
             categoryName: CATEGORIES[i],
             photoType: genPhotoType()
-            // categoryParent_id: randomIntUpTo(i)
         }
         categories.push(category);
     }

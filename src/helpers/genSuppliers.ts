@@ -23,11 +23,9 @@ const genFullName = (arrayName: string[], peopleArray: ISupplier[]): string => {
 
 
 const genSupplierFromArrayName = (arrayName: string[], peopleArray: ISupplier[]): void => {
-    // let id: number = genId(peopleArray);
     let supplierName: string = genFullName(arrayName, peopleArray);
 
     const PERSON: ISupplier = {
-        // id,
         supplierName,
         address: genAddress(),
         email: genEmail(supplierName),

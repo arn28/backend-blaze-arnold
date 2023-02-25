@@ -19,7 +19,6 @@ export class CategoriesController {
                 photoType,
                 categoryParent_id
             });
-            // res.json(resStatus(200, category));
             res.json(category);
 
         } catch (error) {
@@ -30,18 +29,13 @@ export class CategoriesController {
     async getAll(req: Request, res: Response) {
         try {
             const categories = await categoriesService.getAll();
-            // res.json(resStatus(200, categories));
             res.json(categories);
 
         } catch (error) {
             res.status(400).json(resStatus(400, error));            
         }
         
-        // const categories = await categoriesService.getAll();
-        // res.json(categories.map((category: IData<ICategory>) => {
-        //     const { _id, data } = category;
-        //     return { _id, ...data };
-        // }));
+
 
     }
 
@@ -49,13 +43,11 @@ export class CategoriesController {
         try {
             const { id } = req.params;
             const category = await categoriesService.getOneById(+id);
-            // res.json(resStatus(200, category));
             res.json(category);
 
         } catch (error) {
             res.status(400).json(resStatus(400, error));
-            // res.status(400).json(error.message);
-            // console.log(error.message);
+
             
         }
 
@@ -74,7 +66,6 @@ export class CategoriesController {
                 photoType,
                 categoryParent_id
             });
-            // res.json(resStatus(200, category));
             res.json(category);
 
         } catch (error) {
@@ -87,7 +78,6 @@ export class CategoriesController {
         try {
             const { id } = req.params;
             const category = await categoriesService.remove(+id);
-            // res.json(resStatus(200, category));
             res.json(category);
 
         } catch (error) {

@@ -5,10 +5,6 @@ import { getRandomElement, randomFloatUpTo, randomIntUpTo } from "./tools";
 import { genCategories } from "./genCategories";
 import { genPeople } from "./genPeople";
 
-// const genId = (productArray: IProduct[]): number => {
-//     let idProduct: number = productArray.length + 1;
-//     return idProduct;
-// }
 
 const genProductName = (productNameArray: string[], productArray: IProduct[]): string => {
     let productName: string;
@@ -131,7 +127,6 @@ const genOneProduct = (productNameArray: string[], productArray: IProduct[]): vo
 
 
     const PRODUCT: IProduct = {
-        // id: genId(productArray),
         productName,
         weight: productWeight,
         cannabisWeight: genCannabisWeight(productWeight),
@@ -150,8 +145,7 @@ const genOneProduct = (productNameArray: string[], productArray: IProduct[]): vo
         salesPrice: productPrice + productFee,
         inventory: genInventory(),
         discountAmount: genDiscountAmount(),
-        // categories_id: genProductcategories_id(),
-        // supplier_id: genProductsupplier_id()
+
     };
     productArray.push(PRODUCT);
 }

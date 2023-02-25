@@ -3,12 +3,6 @@ import { TypeStreet } from '../enums/type-street.enum';
 import { IPerson } from '../interfaces/person.interface';
 import { getRandomElement, randomIntUpTo } from './tools';
 
-
-// const genId = (peopleArray: IPerson[]): number => {
-//     let idPerson: number = peopleArray.length + 1;
-//     return idPerson;
-// }
-
 const genFullName = (arrayName: string[], peopleArray: IPerson[]): string => {
     let personFirstName: string;
     let personMiddleName: string;
@@ -58,7 +52,6 @@ export const genPhone = (): string => {
 }
 
 const genPersonFromArrayName = (arrayName: string[], peopleArray: IPerson[]): void => {
-    // let id: number = genId(peopleArray);
     let fullName: string = genFullName(arrayName, peopleArray);
 
     const PERSON: IPerson = {
