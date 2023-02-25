@@ -34,9 +34,4 @@ exports.CATEGORIES = [
     'PRE_ROLL',
     'PRE_ROLL_CBD',
 ];
-// export const TYPEPHOTO: string[] = [
-//     'Photo',
-//     'Document',
-//     'Kml',
-// ];
 //# sourceMappingURL=category.js.map

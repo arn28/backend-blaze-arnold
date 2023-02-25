@@ -4,10 +4,6 @@ exports.genProducts = void 0;
 const product_1 = require("../data/product");
 const type_active_enum_1 = require("../enums/type-active.enum");
 const tools_1 = require("./tools");
-// const genId = (productArray: IProduct[]): number => {
-//     let idProduct: number = productArray.length + 1;
-//     return idProduct;
-// }
 const genProductName = (productNameArray, productArray) => {
     let productName;
     do {
@@ -44,7 +40,7 @@ const genBarcode = () => {
     return productSku;
 };
 const genDescription = (productName, productWeight) => {
-    let productDescr = `${productName} is a popular product for its leveling effects.  ${productName} with  ${productWeight}oz energizes the mind while offering full-body relaxation, making it the perfect choice for both new and veteran patients.`;
+    let productDescr = `${productName} is a popular product for its leveling effects, energizes the mind while offering full-body relaxation, making it the perfect choice for both new and veteran patients.`;
     return productDescr;
 };
 const genCannabisVolume = () => {
@@ -104,7 +100,6 @@ const genOneProduct = (productNameArray, productArray) => {
     let productSku = genSku(productName);
     let cannabisVolume = genCannabisVolume();
     const PRODUCT = {
-        // id: genId(productArray),
         productName,
         weight: productWeight,
         cannabisWeight: genCannabisWeight(productWeight),
@@ -123,8 +118,6 @@ const genOneProduct = (productNameArray, productArray) => {
         salesPrice: productPrice + productFee,
         inventory: genInventory(),
         discountAmount: genDiscountAmount(),
-        // categories_id: genProductcategories_id(),
-        // supplier_id: genProductsupplier_id()
     };
     productArray.push(PRODUCT);
 };

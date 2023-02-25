@@ -33,7 +33,6 @@ CREATE TABLE IF NOT EXISTS `saleproductsdb_modified`.`categories` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
-AUTO_INCREMENT = 32
 DEFAULT CHARACTER SET = utf8mb4;
 
 
@@ -100,7 +99,6 @@ CREATE TABLE IF NOT EXISTS `saleproductsdb_modified`.`products` (
   INDEX `fk_products_discounts1_idx` (`discount_id`),
   INDEX `fk_products_parentProducts1_idx` (`parentProduct_id`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 37
 DEFAULT CHARACTER SET = utf8mb4;
 
 
@@ -167,7 +165,6 @@ CREATE TABLE IF NOT EXISTS `saleproductsdb_modified`.`suppliers` (
   `phone` VARCHAR(20) NULL DEFAULT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 34
 DEFAULT CHARACTER SET = utf8mb4;
 
 
@@ -180,7 +177,6 @@ CREATE TABLE IF NOT EXISTS `saleproductsdb_modified`.`tenants` (
   `address` VARCHAR(45) NULL DEFAULT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 34
 DEFAULT CHARACTER SET = utf8mb4;
 
 

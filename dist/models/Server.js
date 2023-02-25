@@ -50,7 +50,8 @@ class Server {
                 console.log('Database Connected');
             }
             catch (error) {
-                throw new Error(error);
+                // throw new Error(error as any);
+                console.error('Unable to connect to the database:', error);
             }
         });
     }

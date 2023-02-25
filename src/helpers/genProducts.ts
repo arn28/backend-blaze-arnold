@@ -49,7 +49,7 @@ const genBarcode = (): string => {
 }
 
 const genDescription = (productName: string, productWeight: number): string => {
-    let productDescr: string = `${productName} is a popular product for its leveling effects.  ${productName} with  ${productWeight}oz energizes the mind while offering full-body relaxation, making it the perfect choice for both new and veteran patients.`;
+    let productDescr: string = `${productName} is a popular product for its leveling effects, energizes the mind while offering full-body relaxation, making it the perfect choice for both new and veteran patients.`;
     return productDescr;
 }
 

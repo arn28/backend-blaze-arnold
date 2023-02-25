@@ -40,7 +40,8 @@ export class Server {
             await db.authenticate();
             console.log('Database Connected');
         } catch (error) {
-            throw new Error(error as any);
+            // throw new Error(error as any);
+            console.error('Unable to connect to the database:', error);
         }
     }
 

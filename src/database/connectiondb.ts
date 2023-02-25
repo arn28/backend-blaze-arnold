@@ -1,6 +1,10 @@
 import { Sequelize } from "sequelize";
-export const db = new Sequelize('saleproductsdb_modified', 'root', '', {
-    host: 'localhost',
+import dotenv from 'dotenv';
+
+dotenv.config();
+
+export const db = new Sequelize(process.env.DB_NAME || '', process.env.DB_USERNAME || '', process.env.DB_PASSWORD || '', {
+    host: process.env.DB_HOST || '',
     dialect: 'mysql',
     define: {
         scopes: {
@@ -9,5 +13,10 @@ export const db = new Sequelize('saleproductsdb_modified', 'root', '', {
             }
         },
         timestamps: false
+    },
+    dialectOptions: {
+        ssl: {
+            rejectUnauthorized: true
+        }
     }
 })

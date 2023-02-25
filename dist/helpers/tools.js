@@ -16,12 +16,10 @@ exports.getRandomElement = getRandomElement;
 const resStatus = (status, response) => {
     let msg;
     if (status === 200) {
-        // msg = {statuscode:status, body: response};
         msg = { response };
     }
     else {
         msg = { statuscode: status, response };
-        // msg = { statuscode: status, response:"Not Found" };
     }
     return msg;
 };

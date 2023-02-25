@@ -23,7 +23,6 @@ class CategoriesController {
                     photoType,
                     categoryParent_id
                 });
-                // res.json(resStatus(200, category));
                 res.json(category);
             }
             catch (error) {
@@ -35,17 +34,11 @@ class CategoriesController {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 const categories = yield categoriesService.getAll();
-                // res.json(resStatus(200, categories));
                 res.json(categories);
             }
             catch (error) {
                 res.status(400).json((0, tools_1.resStatus)(400, error));
             }
-            // const categories = await categoriesService.getAll();
-            // res.json(categories.map((category: IData<ICategory>) => {
-            //     const { _id, data } = category;
-            //     return { _id, ...data };
-            // }));
         });
     }
     getOne(req, res) {
@@ -53,13 +46,10 @@ class CategoriesController {
             try {
                 const { id } = req.params;
                 const category = yield categoriesService.getOneById(+id);
-                // res.json(resStatus(200, category));
                 res.json(category);
             }
             catch (error) {
                 res.status(400).json((0, tools_1.resStatus)(400, error));
-                // res.status(400).json(error.message);
-                // console.log(error.message);
             }
         });
     }
@@ -73,7 +63,6 @@ class CategoriesController {
                     photoType,
                     categoryParent_id
                 });
-                // res.json(resStatus(200, category));
                 res.json(category);
             }
             catch (error) {
@@ -86,7 +75,6 @@ class CategoriesController {
             try {
                 const { id } = req.params;
                 const category = yield categoriesService.remove(+id);
-                // res.json(resStatus(200, category));
                 res.json(category);
             }
             catch (error) {
