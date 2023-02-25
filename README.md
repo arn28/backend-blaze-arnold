@@ -13,8 +13,8 @@ This is basic but complete version of a backend. It includes API routes for cate
 - In table "categories" is being used columns "categoryName" and "categoryParent_id" 
 - In table "products" is being used columns "productName"
 
-<!-- 
+
 
 ## Links
 
-- Demo Link: [MEAR Trainee Fractal](https://mearn-trainee-fractal-frontend.netlify.app/) -->
+- Demo Link: [MEAR Trainee Backend](https://backend-blaze-arnold-production.up.railway.app/)

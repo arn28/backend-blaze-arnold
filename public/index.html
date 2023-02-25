@@ -2,13 +2,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3435/3435306.png" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MERN</title>
+    <title>Backend Homework Blaze</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+        body{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container img{
+            width: 50%;
+        }
+
+        .container .button{
+            font-size: 14px;
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+            width: 120px;
+            padding: 8px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            background-color: green;
+            color: aliceblue;
+            margin: 8px 4px;
+        }
+        .container .button.seed{
+            background-color: crimson;
+
+        }
+
+        .container .button:hover{
+            opacity: 85%;
+            box-shadow: 2px 2px 8px black;
+        }
+    </style>
 </head>
 <body>
-    <h1>Curso Mern</h1>
-    <h2>Backend</h2>
-    <img src="https://miro.medium.com/max/678/1*l2tlJsFNg2tH6QizegKkqA.png" alt="" srcset="">
+    <div class="container">
+        <h1>Backend Homework Blaze</h1>
+        <h2>by Arnold Balabarca</h2>
+        <img src="https://miro.medium.com/max/678/1*l2tlJsFNg2tH6QizegKkqA.png" alt="" srcset="">
+        <div>
+            <a class="button" href="https://backend-blaze-arnold-production.up.railway.app/api/categories" >API categories</a>
+            <a class="button" href="https://backend-blaze-arnold-production.up.railway.app/api/products">API products</a>
+            <a class="button" href="https://backend-blaze-arnold-production.up.railway.app/api/suppliers">API suppliers</a>
+            <a class="button" href="https://backend-blaze-arnold-production.up.railway.app/api/tenants">API tenants</a>
+        </div>
+        <a class="button seed" href="https://backend-blaze-arnold-production.up.railway.app/api/seed">Seed Service</a>
+
+    </div>
 </body>
 </html>
