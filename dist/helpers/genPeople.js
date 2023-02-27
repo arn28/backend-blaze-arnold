@@ -4,10 +4,6 @@ exports.genPeople = exports.genPhone = exports.genEmail = exports.genAddress = v
 const person_1 = require("../data/person");
 const type_street_enum_1 = require("../enums/type-street.enum");
 const tools_1 = require("./tools");
-// const genId = (peopleArray: IPerson[]): number => {
-//     let idPerson: number = peopleArray.length + 1;
-//     return idPerson;
-// }
 const genFullName = (arrayName, peopleArray) => {
     let personFirstName;
     let personMiddleName;
@@ -49,7 +45,6 @@ const genPhone = () => {
 };
 exports.genPhone = genPhone;
 const genPersonFromArrayName = (arrayName, peopleArray) => {
-    // let id: number = genId(peopleArray);
     let fullName = genFullName(arrayName, peopleArray);
     const PERSON = {
         // id,

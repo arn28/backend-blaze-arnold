@@ -12,7 +12,7 @@ categoriesRoutes.get('/', categoriesController.getAll);
 
 categoriesRoutes.get('/:id', [
     check('id', 'Id param must be a number value').isNumeric(),
-    check('id', 'Id param must be a number from 1 to 32').isInt({ min: 1, max: 32 }),
+    // check('id', 'Id param must be a number from 1 to 32').isInt({ min: 1, max: 32 }),
     ValidFields
 ], categoriesController.getOne);
 
@@ -29,7 +29,7 @@ categoriesRoutes.post('/', [
 
 categoriesRoutes.put('/:id', [
     check('id', 'Id param must be a number value').isNumeric(),
-    check('id', 'Id param must be a number from 1 to 32').isInt({ min: 1, max: 32 }),
+    // check('id', 'Id param must be a number from 1 to 32').isInt({ min: 1, max: 32 }),
     check('categoryName', 'categoryName must be up to 45 characters').isLength({ max: 45 }),
     check('photoType', "photoType only accepts 'Photo', 'Document' or 'Kml'").optional().custom(validPhotoType),
     check('photoType', 'photoType must be up to 45 characters').isLength({ max: 45 }),
@@ -38,6 +38,5 @@ categoriesRoutes.put('/:id', [
 ], categoriesController.update);
 categoriesRoutes.delete('/:id', [
     check('id', 'Id param must be a number value').isNumeric(),
-    check('id', 'Id param must be a number from 1 to 32').isInt({ min: 1, max: 32 }),
     ValidFields
 ], categoriesController.remove);

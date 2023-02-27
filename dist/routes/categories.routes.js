@@ -11,7 +11,7 @@ const categoriesController = new categories_controller_1.CategoriesController();
 exports.categoriesRoutes.get('/', categoriesController.getAll);
 exports.categoriesRoutes.get('/:id', [
     (0, express_validator_1.check)('id', 'Id param must be a number value').isNumeric(),
-    (0, express_validator_1.check)('id', 'Id param must be a number from 1 to 32').isInt({ min: 1, max: 32 }),
+    // check('id', 'Id param must be a number from 1 to 32').isInt({ min: 1, max: 32 }),
     valid_fields_middleware_1.ValidFields
 ], categoriesController.getOne);
 exports.categoriesRoutes.post('/', [
@@ -25,7 +25,7 @@ exports.categoriesRoutes.post('/', [
 ], categoriesController.create);
 exports.categoriesRoutes.put('/:id', [
     (0, express_validator_1.check)('id', 'Id param must be a number value').isNumeric(),
-    (0, express_validator_1.check)('id', 'Id param must be a number from 1 to 32').isInt({ min: 1, max: 32 }),
+    // check('id', 'Id param must be a number from 1 to 32').isInt({ min: 1, max: 32 }),
     (0, express_validator_1.check)('categoryName', 'categoryName must be up to 45 characters').isLength({ max: 45 }),
     (0, express_validator_1.check)('photoType', "photoType only accepts 'Photo', 'Document' or 'Kml'").optional().custom(valid_phototype_1.validPhotoType),
     (0, express_validator_1.check)('photoType', 'photoType must be up to 45 characters').isLength({ max: 45 }),
@@ -34,7 +34,6 @@ exports.categoriesRoutes.put('/:id', [
 ], categoriesController.update);
 exports.categoriesRoutes.delete('/:id', [
     (0, express_validator_1.check)('id', 'Id param must be a number value').isNumeric(),
-    (0, express_validator_1.check)('id', 'Id param must be a number from 1 to 32').isInt({ min: 1, max: 32 }),
     valid_fields_middleware_1.ValidFields
 ], categoriesController.remove);
 //# sourceMappingURL=categories.routes.js.map

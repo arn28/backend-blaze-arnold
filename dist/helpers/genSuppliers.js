@@ -18,10 +18,8 @@ const genFullName = (arrayName, peopleArray) => {
     return fullName;
 };
 const genSupplierFromArrayName = (arrayName, peopleArray) => {
-    // let id: number = genId(peopleArray);
     let supplierName = genFullName(arrayName, peopleArray);
     const PERSON = {
-        // id,
         supplierName,
         address: (0, genPeople_1.genAddress)(),
         email: (0, genPeople_1.genEmail)(supplierName),
